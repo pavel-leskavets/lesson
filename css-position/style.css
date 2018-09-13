@@ -1,0 +1,48 @@
+/*
+1. Типы позиционирования:
+static - значение по умолчанию.
+relative - изменение по отношению к самому себе.
+absolute - позиционирование объекта по отношению к ближайшему позиционированному предку.
+fixed - позиционирование по отношению к viewport.
+*/
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	background: green;
+	height: 200vh;
+	padding: 20px;
+}
+.father {
+	background: blue;
+	color: white;
+	font-size: 1.5rem;
+	text-align: center;
+	margin-bottom: 10px;
+  border: 1px solid white;
+	position: relative;
+}
+.relative {
+	position: relative;
+/*	top, right, bottom, left*/
+	top: 10px;
+	left: 20px;
+}
+.absolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: red;
+}
+.father:hover .absolute {
+	display: none;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	
+}
